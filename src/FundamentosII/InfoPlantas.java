@@ -57,9 +57,7 @@ class VentanaPrincipal extends JFrame {
     infoPanel.add(new JLabel("Parte utilizada: " + planta.getParteUtilizada()));
     infoPanel.add(new JLabel("Formas de uso: " + planta.getFormaUso()));
     infoPanel.add(new JLabel("Beneficios: " + planta.getBeneficios()));
-    JLabel advertenciasLabel = new JLabel("Advertencia: " + planta.getAdvertencias());
-    advertenciasLabel.setForeground(Color.RED);
-    infoPanel.add(advertenciasLabel);
+   
     
     JPanel fichaPanel = new JPanel(new BorderLayout(10, 10)); //panel principal que combina la imagen (a la izquierda) y la información (al centro) con un layout de tipo BorderLayout
     fichaPanel.setBorder(BorderFactory.createLineBorder(Color.GRAY));
@@ -78,43 +76,36 @@ class VentanaPrincipal extends JFrame {
     lista.add(new Planta("Menta", "Mentha piperita", "Hojas",
             "Infusión, aceite esencial",
             "Alivia dolores, ayuda digestión",
-            "Evitar en niños menores de 2 años",
              "/FundamentosII/menta.jpg"));
 
     lista.add(new Planta("Manzanilla", "Matricaria chamomilla", "Flores",
             "Infusión",
             "Relajante, ayuda en cólicos",
-            "Evitar en personas alérgicas a compuestas",
             "/FundamentosII/manzanilla.jpg"));
 
     lista.add(new Planta("Eucalipto", "Eucalyptus globulus", "Hojas",
             "Inhalaciones, infusión, ungüentos",
             "Descongestionante, alivia problemas respiratorios",
-            "No usar en exceso, evitar en embarazadas",
             "/FundamentosII/eucalipto.jpg"));
 
     lista.add(new Planta("Jengibre", "Zingiber officinale", "Raíz",
             "Infusión, fresco, en polvo",
             "Antiinflamatorio, mejora digestión, ayuda contra náuseas",
-            "Evitar en casos de úlceras o anticoagulantes",
             "/src/FundamentosII/jengibre.jpg"));
 
     lista.add(new Planta("Rosa mosqueta", "Rosa rubiginosa", "Frutos y semillas",
             "Aceite, infusión",
             "Regenera piel, rica en vitamina C",
-            "Evitar en personas con alergia a rosas",
             "/src/FundamentosII/rosamosqueta.jpg"));
 
     lista.add(new Planta("Boldo", "Peumus boldus", "Hojas",
             "Infusión",
             "Estimula hígado, ayuda en digestión pesada",
-            "Evitar en embarazo y lactancia, no usar por más de 2 semanas",
             "/src/FundamentosII/boldo.jpg"));
 
     lista.add(new Planta("Burrito", "Aloysia polystachya", "Hojas",
             "Infusión",
             "Alivia malestares estomacales y cólicos",
-            "Evitar el uso prolongado o en dosis altas",
             "/FundamentosII/burrito.jpg"));
 
     return lista;
@@ -129,19 +120,17 @@ class Planta {
     private String parteUtilizada;
     private String formaUso;
     private String beneficios;
-    private String advertencias;
     private String rutaImagen;
     
     
 // constructor
     public Planta(String nombreComun, String nombreCientifico, String parteUtilizada,
-                  String formaUso, String beneficios, String advertencias, String rutaImagen) {
+                  String formaUso, String beneficios, String rutaImagen) {
         this.nombreComun = nombreComun;
         this.nombreCientifico = nombreCientifico;
         this.parteUtilizada = parteUtilizada;
         this.formaUso = formaUso;
         this.beneficios = beneficios;
-        this.advertencias = advertencias;
         this.rutaImagen = rutaImagen;
     }
 
@@ -163,10 +152,6 @@ class Planta {
 
     public String getBeneficios() {
         return beneficios;
-    }
-
-    public String getAdvertencias() {
-        return advertencias;
     }
 
     public String getRutaImagen() {
