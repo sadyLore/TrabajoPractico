@@ -46,11 +46,11 @@ class VentanaPrincipal extends JFrame {
     
     ImageIcon icon = new ImageIcon(getClass().getResource(planta.getRutaImagen()));
     Image img = icon.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH);
-    imagenLabel.setIcon(new ImageIcon(img)); // Aquí asignamos la imagen escalada correctamente
+    imagenLabel.setIcon(new ImageIcon(img));
 
     JPanel infoPanel = new JPanel(); //panel que contiene etiquetas con la información textual de la planta. Usa layout vertical.
     infoPanel.setLayout(new BoxLayout(infoPanel, BoxLayout.Y_AXIS));
-    infoPanel.setBackground(Color.WHITE); //color azul claro
+    infoPanel.setBackground(Color.WHITE); 
     infoPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));//borde vacio
     infoPanel.add(new JLabel("Nombre común: " + planta.getNombreComun()));
     infoPanel.add(new JLabel("Nombre científico: " + planta.getNombreCientifico()));
@@ -86,27 +86,27 @@ class VentanaPrincipal extends JFrame {
     lista.add(new Planta("Eucalipto", "Eucalyptus globulus", "Hojas",
             "Inhalaciones, infusión, ungüentos",
             "Descongestionante, alivia problemas respiratorios",
-            "/FundamentosII/eucalipto.jpg"));
+            "/FundamentosII/eucalipto.png"));
 
     lista.add(new Planta("Jengibre", "Zingiber officinale", "Raíz",
             "Infusión, fresco, en polvo",
             "Antiinflamatorio, mejora digestión, ayuda contra náuseas",
-            "/src/FundamentosII/jengibre.jpg"));
+            "/FundamentosII/jengibre.jpg"));
 
     lista.add(new Planta("Rosa mosqueta", "Rosa rubiginosa", "Frutos y semillas",
             "Aceite, infusión",
             "Regenera piel, rica en vitamina C",
-            "/src/FundamentosII/rosamosqueta.jpg"));
+            "/FundamentosII/rosamosqueta.jpg"));
 
     lista.add(new Planta("Boldo", "Peumus boldus", "Hojas",
             "Infusión",
             "Estimula hígado, ayuda en digestión pesada",
-            "/src/FundamentosII/boldo.jpg"));
+            "/FundamentosII/boldo.png"));
 
     lista.add(new Planta("Burrito", "Aloysia polystachya", "Hojas",
             "Infusión",
             "Alivia malestares estomacales y cólicos",
-            "/FundamentosII/burrito.jpg"));
+            "/FundamentosII/burrito.png"));
 
     return lista;
 }
