@@ -88,20 +88,28 @@ class VentanaPrincipal extends JFrame {
             "Descongestionante, alivia problemas respiratorios",
             "/FundamentosII/eucalipto.png"));
 
+        
+
+
     lista.add(new Planta("Jengibre", "Zingiber officinale", "Raíz",
             "Infusión, fresco, en polvo",
             "Antiinflamatorio, mejora digestión, ayuda contra náuseas",
+
             "/FundamentosII/jengibre.jpg"));
+
+
 
     lista.add(new Planta("Rosa mosqueta", "Rosa rubiginosa", "Frutos y semillas",
             "Aceite, infusión",
             "Regenera piel, rica en vitamina C",
             "/FundamentosII/rosamosqueta.jpg"));
 
+
     lista.add(new Planta("Boldo", "Peumus boldus", "Hojas",
             "Infusión",
             "Estimula hígado, ayuda en digestión pesada",
             "/FundamentosII/boldo.png"));
+
 
     lista.add(new Planta("Burrito", "Aloysia polystachya", "Hojas",
             "Infusión",
