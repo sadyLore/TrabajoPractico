@@ -2,15 +2,15 @@ package FundamentosII;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import javax.swing.plaf.FontUIResource;
 
 //Usa SwingUtilities.invokeLater() para asegurar que la interfaz gráfica se construya correctamente en el hilo correcto  
 public class InfoPlantas{
     public static void main(String[] args) {
-    SwingUtilities.invokeLater(() -> new VentanaPrincipal().setVisible(true)); //y despues es crear la ventana que usaremos
-    }                               
-}
+        
+    }
 
-
+   
 class VentanaPrincipal extends JFrame {
     private ArrayList<Planta> listaPlantas; //su atributo que cargala info de todaslas plantas
     public VentanaPrincipal() {
@@ -165,4 +165,5 @@ class Planta {
     public String getRutaImagen() {
         return rutaImagen;
     }
+}
 }
