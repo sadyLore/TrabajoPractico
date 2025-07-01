@@ -16,9 +16,9 @@ class VentanaPrincipal extends JFrame {
     public VentanaPrincipal() {
        
         setTitle("Ficha Técnica de Plantas Medicinales");
-        setDefaultCloseOperation(EXIT_ON_CLOSE);   //para que al cerrar la ventana se termine el programa.
+        setDefaultCloseOperation(EXIT_ON_CLOSE);                                                                        //para que al cerrar la ventana se termine el programa.
         setSize(800, 600);
-        setLocationRelativeTo(null);// esto es para centrar la ventana en la pantalla
+        setLocationRelativeTo(null);
       
         listaPlantas = cargarPlantas();//aca ya empezamos a llenar  la lista con plantas y sus daots
 
@@ -26,12 +26,12 @@ class VentanaPrincipal extends JFrame {
         plantasPanel.setLayout(new BoxLayout(plantasPanel, BoxLayout.Y_AXIS));
         plantasPanel.setBackground(Color.WHITE);
 
-        for (Planta planta : listaPlantas) { //aca se crea una ficha para cada planta con todos sus datos
+        for (Planta planta : listaPlantas) {                                                                       //aca se crea una ficha para cada planta con todos sus datos
             plantasPanel.add(crearFicha(planta));
             plantasPanel.add(Box.createVerticalStrut(15));// espacio de separacion
         }
         
-        JScrollPane scrollPane = new JScrollPane(plantasPanel);//se pone el panel de plantas dentro de un panel con scroll, ese que se puede subir y bajar para que pueda desplazarse si hay muchas plantas.
+        JScrollPane scrollPane = new JScrollPane(plantasPanel); //se pone el panel de plantas dentro de un panel con scroll, ese que se puede subir y bajar para que pueda desplazarse si hay muchas plantas.
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         add(scrollPane);
@@ -42,10 +42,10 @@ class VentanaPrincipal extends JFrame {
 // PRIMER METODO
     private JPanel crearFicha(Planta planta) {
     JLabel imagenLabel = new JLabel();// esto es para ver la imagen , hule ta
-    imagenLabel.setPreferredSize(new Dimension(150, 150));
+    imagenLabel.setPreferredSize(new Dimension(300, 350));
     
     ImageIcon icon = new ImageIcon(getClass().getResource(planta.getRutaImagen()));
-    Image img = icon.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+    Image img = icon.getImage().getScaledInstance(300, 350, Image.SCALE_SMOOTH);
     imagenLabel.setIcon(new ImageIcon(img));
 
     JPanel infoPanel = new JPanel(); //panel que contiene etiquetas con la información textual de la planta. Usa layout vertical.
